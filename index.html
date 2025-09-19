@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhay Kumar | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(90deg, #4b6cb7, #182848);
+            color: white;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+        section {
+            padding: 50px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            width: 80%;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background: #182848;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: auto;
+            font-size: 16px;
+        }
+        #skills ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+        #skills ul li {
+            list-style: none;
+            background: #4b6cb7;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.3s, background 0.3s;
+        }
+        #skills ul li:hover {
+            background: #ffcc00;
+            transform: scale(1.1);
+            color: black;
+        }
+        #profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #4b6cb7;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        #profile-img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(75, 108, 183, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <img id="profile-img" src="https://i.postimg.cc/Zn1YwSjN/image.png" alt="My Photo">
+        <p>Hi, I'm <strong>Abhay Kumar</strong>, a BCA student at <strong>Galgotias University</strong>, graduating in 2027. Passionate about technology and coding, I am constantly exploring new innovations in software development and web technologies. Welcome to my portfolio!</p>
+        <button onclick="alert('Thanks for visiting my portfolio!')">Say Hi!</button>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p><strong>Degree:</strong> Bachelor’s in Computer Science and Engineering</p>
+        <p><strong>University:</strong> Galgotias University</p>
+        <p><strong>Year:</strong> 2027 </p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>FoodieFusion:</strong>  FoodieFusion is a web-based platform that showcases various food recipes from different cuisines. It helps users discover new dishes, learn step-by-step cooking instructions, and explore the cultural significance of different foods.</li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>C</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Info</h2>
+        <p>Email: abhaypandit552004@gmail.com</p>
+        <p>Github: <a href="https://github.com/Abhaypandit05">Abhaypandit05</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll("nav ul li a");
+            links.forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
